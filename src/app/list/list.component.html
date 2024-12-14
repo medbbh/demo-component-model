@@ -1,0 +1,20 @@
+<div class="user-list">
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userList">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>
+                    <button [routerLink]="'[/child,user.id]'">Details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
