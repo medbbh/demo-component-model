@@ -12,7 +12,8 @@
                 <td>{{user.name}}</td>
                 <td>{{user.age}}</td>
                 <td>
-                    <button [routerLink]="'[/child,user.id]'">Details</button>
+                    <button [routerLink]="['/child',user.id]">Details</button>
+                    <button [routerLink]="['/parent',user.id]" class="btn-edit">Edit</button>
                 </td>
             </tr>
         </tbody>

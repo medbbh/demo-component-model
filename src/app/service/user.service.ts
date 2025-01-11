@@ -14,6 +14,10 @@ export class UserService {
     return [...this.users]
   }
 
+  getUserById(userId:number){
+    return this.users.find(u => u.id = userId)
+  }
+
   addUser(user:User){
     this.users.push(user);
   }

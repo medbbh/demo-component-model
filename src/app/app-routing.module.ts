@@ -19,6 +19,10 @@ const routes : Routes = [
         component: ParentComponent,
     },
     {
+        path:'parent/:id',
+        component: ParentComponent,
+    },
+    {
         path:'child/:id',
         component:ChildComponent,
     },

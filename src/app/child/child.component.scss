@@ -1,66 +1,30 @@
-/* Child component styles */
 .child-card {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;  
-    max-width: 400px; 
-  }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .child-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.username {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #333;
+.child-card .username {
+    color: #2c3e50;
+    font-size: 1.4em;
     margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    font-weight: 600;
 }
 
-.age {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.actions {
-    display: flex;
-    justify-content: space-between;
-}
-
-button {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:focus {
-    outline: none;  
-}
-
-.delete-btn {
-    background-color: #e74c3c;
-    color: white;
-}
-
-.delete-btn:hover {
-    background-color: #c0392b;
-    transform: translateY(-2px);
-}
-
-.edit-btn {
-    background-color: #4b8c8f;
-    color: white;
-}
-
-.edit-btn:hover {
-    background-color: #3a7072;
-    transform: translateY(-2px);
+.child-card .age {
+    color: #7f8c8d;
+    font-size: 1em;
+    margin-top: 10px;
 }

@@ -8,6 +8,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ListComponent } from './list/list.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ListComponent } from './list/list.component';
     UserComponent,
     ParentComponent,
     ChildComponent,
-    ListComponent
+    ListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

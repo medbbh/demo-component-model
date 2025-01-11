@@ -30,6 +30,11 @@ export class ParentComponent implements OnInit {
     this.userNextId = this.userService.getUsers().length > 0 ? 
       Math.max(...this.userService.getUsers().map(user => user.id)) + 1 : 1;
 
+    const idUser = Number(this.route.snapshot.paramMap.get('id'))
+    if(idUser){
+      this.onEditCall(idUser)
+    }
+    
   }
 
   // private loadUsers(): void {
@@ -57,15 +62,18 @@ export class ParentComponent implements OnInit {
     }
   }
 
-  onEditCall(user: User): void {
+  onEditCall(userId: number): void {
     this.isEditMode = true;
-    this.editUserId = user.id;
+    this.editUserId = userId;
+    
+    // You'll need to fetch the user by ID first
+    const user = this.userService.getUserById(userId);
+    
     this.userForm.patchValue({
-      name: user.name,
-      age: user.age,
+      name: user?.name,
+      age: user?.age,
     });
   }
-
   onDeleteCall(userId: number): void {
     this.userService.deleteUser(userId);
     // this.loadUsers();
